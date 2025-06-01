@@ -2,6 +2,8 @@
 
 **使用 Trae（Claude-3,7-sonnet）生成，人工微调**
 
+![示例](./image.png)
+
 ## 项目简介
 
 这是一个基于Vue 3和Vite开发的Web应用，用于将Markdown文档中带超链接的标题提取出来，在标题下方显示对应的链接和二维码图片。这对于需要在微信公众号等不支持外部链接的平台发布文章时特别有用，读者可以通过扫描二维码访问链接。
@@ -20,7 +22,7 @@
 
 ### 在线使用
 
-1. 访问应用网址（部署后添加）
+1. 访问应用网址（https://atqq.github.io/md-qrlink/）
 2. 在编辑区输入或粘贴Markdown内容
 3. 实时查看原始预览和转换后的效果
 4. 点击「复制转换后内容」按钮，将内容复制到剪贴板
@@ -30,7 +32,7 @@
 
 ```bash
 # 克隆项目
-git clone [项目地址]
+git clone https://github.com/ATQQ/md-qrlink.git
 
 # 进入项目目录
 cd md-qrlink
