@@ -1,5 +1,7 @@
 # Markdown标题外链转二维码工具 (md-qrlink)
 
+**使用 Trae（Claude-3,7-sonnet）生成，人工微调**
+
 ## 项目简介
 
 这是一个基于Vue 3和Vite开发的Web应用，用于将Markdown文档中带超链接的标题提取出来，在标题下方显示对应的链接和二维码图片。这对于需要在微信公众号等不支持外部链接的平台发布文章时特别有用，读者可以通过扫描二维码访问链接。
@@ -43,6 +45,20 @@ npm run dev
 npm run build
 ```
 
+### GitHub Pages 部署
+
+本项目已配置 GitHub Actions 自动部署到 GitHub Pages：
+
+1. Fork 或克隆本仓库
+2. 启用仓库的 GitHub Pages 功能，选择 GitHub Actions 作为构建和部署源
+3. 推送代码到 main 分支，GitHub Actions 将自动构建并部署
+
+也可以手动触发部署：
+
+1. 在仓库页面，点击 Actions 标签
+2. 选择 "Deploy to GitHub Pages" 工作流
+3. 点击 "Run workflow" 按钮
+
 ## 技术栈
 
 - **前端框架**: Vue 3 (使用Composition API和`<script setup>`语法)
@@ -52,6 +68,7 @@ npm run build
 - **二维码生成**: qrcode.js和qrcode.vue
 - **HTTP请求**: axios
 - **本地存储**: localStorage API
+- **CI/CD**: GitHub Actions (自动部署到 GitHub Pages)
 
 ## 核心实现原理
 
@@ -80,9 +97,21 @@ npm run build
 - 使用localStorage自动保存用户编辑的内容
 - 应用启动时自动加载上次编辑的内容或示例内容
 
+### 自动部署
+
+- 使用GitHub Actions自动构建和部署应用到GitHub Pages
+- 配置SPA路由处理，确保刷新页面和直接访问子路由时不会出现404错误
+- 自动适配GitHub Pages的基本路径，确保资源正确加载
+
 ## 项目结构
 
 ```
+.github/                # GitHub配置
+├── workflows/          # GitHub Actions工作流
+│   └── deploy.yml      # 自动部署到GitHub Pages的工作流配置
+public/                 # 静态资源
+├── 404.html            # SPA路由处理页面
+├── .nojekyll           # 禁用GitHub Pages的Jekyll处理
 src/
 ├── components/         # 组件
 │   ├── MarkdownEditor.vue  # 编辑器组件
