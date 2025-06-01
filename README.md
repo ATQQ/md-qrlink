@@ -2,6 +2,8 @@
 
 **使用 Trae（Claude-3,7-sonnet）生成，人工微调**
 
+适用于微信公众号等不支持直接跳转外部链接的平台使用，搭配 https://github.com/doocs/md 使用更加
+
 ![示例](./image.png)
 
 ## 项目简介
