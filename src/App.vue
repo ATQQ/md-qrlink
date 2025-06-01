@@ -1,7 +1,10 @@
 <template>
-  <router-view />
+  <!-- <router-view /> -->
+  <Home />
 </template>
-
+<script setup>
+import Home from './views/Home.vue';
+</script>
 <style>
 body {
   font-family: Arial, sans-serif;
