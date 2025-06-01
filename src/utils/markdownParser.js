@@ -121,10 +121,14 @@ export const getTransformedContentForCopy = async (content) => {
         
         // 添加二维码图片和链接
         if (qrCodeBase64) {
-          transformedLines.push(`<div style="display:flex;align-items:flex-start;margin:10px 0;padding:10px;background-color:#f9f9f9;border-radius:4px;text-align:left;flex-wrap:nowrap;overflow:hidden;">
-            <img src="${qrCodeBase64}" alt="QR Code" style="display:inline-block;margin-right:15px;vertical-align:top;width:100px;height:100px;flex-shrink:0;">
+          transformedLines.push(`<p style="display:flex;align-items:flex-start;margin:10px 0;padding:10px;background-color:#f9f9f9;border-radius:4px;text-align:left;flex-wrap:nowrap;overflow:hidden;">
+            <span style="background-color:#f9f9f9;display:inline-block;vertical-align:top;width:80px;height:80px;flex-shrink:0;">
+            <img src="${qrCodeBase64}" alt="QR Code" style="display:inline-block;vertical-align:top;width:80px;height:80px;flex-shrink:0;">
+            </span>
+            <span style="background-color:#f9f9f9;height:80px;width: 180px; display:inline-block;vertical-align:middle;word-break:break-all;word-wrap:break-word;overflow-wrap:break-word;flex:1;min-width:0;padding:5px 10px;font-size:0.9em;line-height:1.5;">
             <a href="${url}" target="_blank" style="display:inline-block;vertical-align:middle;word-break:break-all;word-wrap:break-word;overflow-wrap:break-word;flex:1;min-width:0;padding:5px 0;">${url}</a>
-          </div>`);
+            </span>
+          </p>`);
         } else {
           // 如果二维码生成失败，只添加链接
           transformedLines.push(`<a href="${url}" target="_blank">${url}</a>`);
