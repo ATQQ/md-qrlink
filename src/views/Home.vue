@@ -8,7 +8,9 @@
     </a>
     <h1>Markdown标题外链转二维码</h1>
     <p class="description">将Markdown中带超链接的标题提取出来，放在标题下方，并在左侧生成对应的二维码图片</p>
-    
+    <p class="description">
+      搭配 <a href="https://github.com/doocs/md?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">微信 Markdown 编辑器</a>（<a href="https://md.doocs.org" target="_blank">md.doocs.org</a>） 使用效果更加
+    </p>
     <div class="actions">
       <button @click="loadSample">加载示例</button>
       <button @click="clearContent">清空内容</button>
