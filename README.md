@@ -69,8 +69,7 @@ npm run build
 - **构建工具**: Vite
 - **路由管理**: Vue Router
 - **Markdown解析**: markdown-it
-- **二维码生成**: qrcode.js和qrcode.vue
-- **HTTP请求**: axios
+- **二维码生成**: qrcode 和qrcode.vue
 - **本地存储**: localStorage API
 - **CI/CD**: GitHub Actions (自动部署到 GitHub Pages)
 
