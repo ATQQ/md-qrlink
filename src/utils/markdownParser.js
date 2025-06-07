@@ -53,7 +53,7 @@ export const transformMarkdown = (content) => {
       transformedLines.push(`<div class="link-container">
         <div class="qrcode-placeholder" data-url="${url}"></div>
         <a href="${url}" target="_blank">${url}</a>
-      </div>`);
+      </div>\n`);
     } else {
       // 保留原始行，不做处理
       transformedLines.push(line);
@@ -128,7 +128,7 @@ export const getTransformedContentForCopy = async (content) => {
             <span style="background-color:#f9f9f9;height:80px;width: 180px; display:inline-block;vertical-align:middle;word-break:break-all;word-wrap:break-word;overflow-wrap:break-word;flex:1;min-width:0;padding:5px 10px;font-size:0.9em;line-height:1.5;">
             <a href="${url}" target="_blank" style="display:inline-block;vertical-align:middle;word-break:break-all;word-wrap:break-word;overflow-wrap:break-word;flex:1;min-width:0;padding:5px 0;">${url}</a>
             </span>
-          </p>`);
+          </p>\n`);
         } else {
           // 如果二维码生成失败，只添加链接
           transformedLines.push(`<a href="${url}" target="_blank">${url}</a>`);
