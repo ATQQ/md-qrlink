@@ -1,0 +1,12 @@
+services:
+  md-qrlink:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: md-qrlink-app
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    # 如果需要挂载卷，可以取消下面的注释
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/conf.d/default.conf

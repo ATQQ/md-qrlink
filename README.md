@@ -30,6 +30,25 @@
 4. 点击「复制转换后内容」按钮，将内容复制到剪贴板
 5. 粘贴到微信公众号等平台
 
+### Docker 部署
+```sh
+docker run -d -p 8080:80 --restart unless-stopped --name md-qrlink-app sugarjl/md-qrlink:latest
+```
+
+### GitHub Pages 部署
+
+本项目已配置 GitHub Actions 自动部署到 GitHub Pages：
+
+1. Fork 或克隆本仓库
+2. 启用仓库的 GitHub Pages 功能，选择 GitHub Actions 作为构建和部署源
+3. 推送代码到 main 分支，GitHub Actions 将自动构建并部署
+
+也可以手动触发部署：
+
+1. 在仓库页面，点击 Actions 标签
+2. 选择 "Deploy to GitHub Pages" 工作流
+3. 点击 "Run workflow" 按钮
+
 ### 本地开发
 
 ```bash
@@ -48,20 +67,6 @@ npm run dev
 # 构建生产版本
 npm run build
 ```
-
-### GitHub Pages 部署
-
-本项目已配置 GitHub Actions 自动部署到 GitHub Pages：
-
-1. Fork 或克隆本仓库
-2. 启用仓库的 GitHub Pages 功能，选择 GitHub Actions 作为构建和部署源
-3. 推送代码到 main 分支，GitHub Actions 将自动构建并部署
-
-也可以手动触发部署：
-
-1. 在仓库页面，点击 Actions 标签
-2. 选择 "Deploy to GitHub Pages" 工作流
-3. 点击 "Run workflow" 按钮
 
 ## 技术栈
 
